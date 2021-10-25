@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "**/templates/**/*.html": "django-html",
+        "**/*.html": "html"
+    },
+    "python.languageServer": "Pylance",
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    }
+}
