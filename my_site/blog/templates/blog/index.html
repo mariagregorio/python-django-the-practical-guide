@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_files %}
+   <link rel="stylesheet" href="{% static 'blog/styles.css' %}">
+{% endblock %}
+
+{% block page_title %}
+    Vampira's Blog
+{% endblock %}
+
+{% block content %}
+    <section class="welcome">
+        <img src="{% static 'blog/images/puppy.jpg' %}" alt="">
+        <div>
+            <h1>Welcome to Vampira's Blog</h1>
+            <h3>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin.</h3>
+        </div>
+    </section>
+
+    <section class="latest">
+        <h1>Latest posts</h1>
+        <ul>
+            {% for post in latest_posts %}
+                {% include 'blog/includes/post-list-item.html' %}
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}
